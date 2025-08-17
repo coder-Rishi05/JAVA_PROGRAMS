@@ -1,74 +1,173 @@
 # 🚀 Java OOPs & Abstraction Practice Questions  
 
 Welcome to this collection of **Java Programming Exercises**! 🎯  
-This set of problems is carefully designed to help you **master Object-Oriented Programming (OOPs)** concepts like *Inheritance, Method Overriding, Abstract Classes, and Dynamic Dispatch*.  
+This set of problems is designed to help you practice **Object-Oriented Programming (OOPs)** concepts like *Inheritance, Method Overriding, Abstract Classes, and Dynamic Dispatch*.  
 
-💡 Whether you're a beginner exploring Java or preparing for interviews, these questions will help you **practice step by step**. Each problem focuses on a key concept to strengthen your understanding.  
+💡 These problems are great for both **beginners** and **interview preparation**.  
 
 ---
 
 ## 📘 Questions  
 
-<ol>
+<details>
+<summary>✨ <code>Write a Java program to create a class called Animal with a method called makeSound(). Create a subclass called Cat that overrides the makeSound() method to bark.</code></summary>
+</details>  
 
-<li> ✨ <b>Write a Java program to create a class called <code>Animal</code> with a method called <code>makeSound()</code>. Create a subclass called <code>Cat</code> that overrides the <code>makeSound()</code> method to bark.</b> </li>  
+<br><br>
 
-<li> 🚗 <b>Write a Java program to create a class called <code>Vehicle</code> with a method called <code>drive()</code>. Create a subclass called <code>Car</code> that overrides the <code>drive()</code> method to print "Repairing a car".</b> </li>  
+<details>
+<summary>🚗 <code>Write a Java program to create a class called Vehicle with a method called drive(). Create a subclass called Car that overrides the drive() method to print "Repairing a car".</code></summary>
+</details>  
 
-<li> 📐 <b>Write a Java program to create a class called <code>Shape</code> with a method called <code>getArea()</code>. Create a subclass called <code>Rectangle</code> that overrides the <code>getArea()</code> method to calculate the area of a rectangle.</b> </li>  
+<br><br>
 
-<li> 👔 <b>Write a Java program to create a class called <code>Employee</code> with methods called <code>work()</code> and <code>getSalary()</code>. Create a subclass called <code>HRManager</code> that overrides the <code>work()</code> method and adds a new method called <code>addEmployee()</code>.</b> </li>  
+<details>
+<summary>📐 <code>Write a Java program to create a class called Shape with a method called getArea(). Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle.</code></summary>
+</details>  
 
-<li> 💰 <b>Write a Java program to create a class known as <code>BankAccount</code> with methods called <code>deposit()</code> and <code>withdraw()</code>. Create a subclass called <code>SavingsAccount</code> that overrides the <code>withdraw()</code> method to prevent withdrawals if the account balance falls below one hundred.</b> </li>  
+<br><br>
 
-<li> 🐆 <b>Write a Java program to create a class called <code>Animal</code> with a method named <code>move()</code>. Create a subclass called <code>Cheetah</code> that overrides the <code>move()</code> method to run.</b> </li>  
+<details>
+<summary>👔 <code>Write a Java program to create a class called Employee with methods called work() and getSalary(). Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee().</code></summary>
+</details>  
 
-<li> 👤 <b>Write a Java program to create a class known as <code>Person</code> with methods called <code>getFirstName()</code> and <code>getLastName()</code>. Create a subclass called <code>Employee</code> that adds a new method named <code>getEmployeeId()</code> and overrides the <code>getLastName()</code> method to include the employee's job title.</b> </li>  
+<br><br>
 
-<li> ⚪ <b>Write a Java program to create a class called <code>Shape</code> with methods called <code>getPerimeter()</code> and <code>getArea()</code>. Create a subclass called <code>Circle</code> that overrides the <code>getPerimeter()</code> and <code>getArea()</code> methods to calculate the area and perimeter of a circle.</b> </li>  
+<details>
+<summary>💰 <code>Write a Java program to create a class known as "BankAccount" with methods called deposit() and withdraw(). Create a subclass called SavingsAccount that overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.</code></summary>
+</details>  
 
-<li> 🚙 <b>Write a Java program to create a vehicle class hierarchy. The base class should be <code>Vehicle</code>, with subclasses <code>Truck</code>, <code>Car</code> and <code>Motorcycle</code>. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.</b> </li>  
+<br><br>
 
-<li> 🏢 <b>Write a Java program that creates a class hierarchy for employees of a company. The base class should be <code>Employee</code>, with subclasses <code>Manager</code>, <code>Developer</code>, and <code>Programmer</code>. Each subclass should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.</b> </li>  
+<details>
+<summary>🐆 <code>Write a Java program to create a class called Animal with a method named move(). Create a subclass called Cheetah that overrides the move() method to run.</code></summary>
+</details>  
 
-<li> 🟩 <b>Create a program, showing an example of <code>super</code> keyword.</b> </li>  
+<br><br>
 
-<li> 🟦 <b>Create a program, showing an example of <code>super</code> function.</b> </li>  
+<details>
+<summary>👤 <code>Write a Java program to create a class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title.</code></summary>
+</details>  
 
-<li> 🔄 <b>Create a program, showing an example of method overriding.</b> </li>  
+<br><br>
 
-<li> 🔀 <b>Create a program, showing an example of dynamic method dispatch.</b> </li>  
+<details>
+<summary>⚪ <code>Write a Java program to create a class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.</code></summary>
+</details>  
 
-<li> 🦁 <b>Write a Java program to create an abstract class <code>Animal</code> with an abstract method called <code>sound()</code>. Create subclasses <code>Lion</code> and <code>Tiger</code> that extend the <code>Animal</code> class and implement the <code>sound()</code> method to make a specific sound for each animal.</b> </li>  
+<br><br>
 
-<li> 📏 <b>Write a Java program to create an abstract class <code>Shape</code> with abstract methods <code>calculateArea()</code> and <code>calculatePerimeter()</code>. Create subclasses <code>Circle</code> and <code>Triangle</code> that extend the <code>Shape</code> class and implement the respective methods to calculate the area and perimeter of each shape.</b> </li>  
+<details>
+<summary>🚙 <code>Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.</code></summary>
+</details>  
 
-<li> 🏦 <b>Write a Java program to create an abstract class <code>BankAccount</code> with abstract methods <code>deposit()</code> and <code>withdraw()</code>. Create subclasses: <code>SavingsAccount</code> and <code>CurrentAccount</code> that extend the <code>BankAccount</code> class and implement the respective methods to handle deposits and withdrawals for each account type.</b> </li>  
+<br><br>
 
-<li> 🍖 <b>Write a Java program to create an abstract class <code>Animal</code> with abstract methods <code>eat()</code> and <code>sleep()</code>. Create subclasses <code>Lion</code>, <code>Tiger</code>, and <code>Deer</code> that extend the <code>Animal</code> class and implement the <code>eat()</code> and <code>sleep()</code> methods differently based on their specific behavior.</b> </li>  
+<details>
+<summary>🏢 <code>Write a Java program that creates a class hierarchy for employees of a company. The base class should be Employee, with subclasses Manager, Developer, and Programmer. Each subclass should have properties such as name, address, salary, and job title. Implement methods for calculating bonuses, generating performance reports, and managing projects.</code></summary>
+</details>  
 
-<li> 👨‍💻 <b>Write a Java program to create an abstract class <code>Employee</code> with abstract methods <code>calculateSalary()</code> and <code>displayInfo()</code>. Create subclasses <code>Manager</code> and <code>Programmer</code> that extend the <code>Employee</code> class and implement the respective methods to calculate salary and display information for each role.</b> </li>  
+<br><br>
 
-<li> 🔲 <b>Write a Java program to create an abstract class <code>Shape3D</code> with abstract methods <code>calculateVolume()</code> and <code>calculateSurfaceArea()</code>. Create subclasses <code>Sphere</code> and <code>Cube</code> that extend the <code>Shape3D</code> class and implement the respective methods to calculate the volume and surface area of each shape.</b> </li>  
+<details>
+<summary>🟩 <code>Create a program, showing an example of super keyword.</code></summary>
+</details>  
 
-<li> 🛵 <b>Write a Java program to create an abstract class <code>Vehicle</code> with abstract methods <code>startEngine()</code> and <code>stopEngine()</code>. Create subclasses <code>Car</code> and <code>Motorcycle</code> that extend the <code>Vehicle</code> class and implement the respective methods to start and stop the engines for each vehicle type.</b> </li>  
+<br><br>
 
-<li> 🏃‍♂️ <b>Write a Java program to create an abstract class <code>Person</code> with abstract methods <code>eat()</code> and <code>exercise()</code>. Create subclasses <code>Athlete</code> and <code>LazyPerson</code> that extend the <code>Person</code> class and implement the respective methods to describe how each person eats and exercises.</b> </li>  
+<details>
+<summary>🟦 <code>Create a program, showing an example of super function.</code></summary>
+</details>  
 
-<li> 🎻 <b>Write a Java program to create an abstract class <code>Instrument</code> with abstract methods <code>play()</code> and <code>tune()</code>. Create subclasses for <code>Glockenspiel</code> and <code>Violin</code> that extend the <code>Instrument</code> class and implement the respective methods to play and tune each instrument.</b> </li>  
+<br><br>
 
-<li> 🖼️ <b>Write a Java program to create an abstract class <code>Shape2D</code> with abstract methods <code>draw()</code> and <code>resize()</code>. Create subclasses <code>Rectangle</code> and <code>Circle</code> that extend the <code>Shape2D</code> class and implement the respective methods to draw and resize each shape.</b> </li>  
+<details>
+<summary>🔄 <code>Create a program, showing an example of method overriding.</code></summary>
+</details>  
 
-<li> 🦅 <b>Write a Java program to create an abstract class <code>Bird</code> with abstract methods <code>fly()</code> and <code>makeSound()</code>. Create subclasses <code>Eagle</code> and <code>Hawk</code> that extend the <code>Bird</code> class and implement the respective methods to describe how each bird flies and makes a sound.</b> </li>  
+<br><br>
 
-<li> 🔺 <b>Write a Java program to create an abstract class <code>GeometricShape</code> with abstract methods <code>area()</code> and <code>perimeter()</code>. Create subclasses <code>Triangle</code> and <code>Square</code> that extend the <code>GeometricShape</code> class and implement the respective methods to calculate the area and perimeter of each shape.</b> </li>  
+<details>
+<summary>🔀 <code>Create a program, showing an example of dynamic method dispatch.</code></summary>
+</details>  
 
-</ol>
+<br><br>
+
+<details>
+<summary>🦁 <code>Write a Java program to create an abstract class Animal with an abstract method called sound(). Create subclasses Lion and Tiger that extend the Animal class and implement the sound() method to make a specific sound for each animal.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>📏 <code>Write a Java program to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). Create subclasses Circle and Triangle that extend the Shape class and implement the respective methods to calculate the area and perimeter of each shape.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🏦 <code>Write a Java program to create an abstract class BankAccount with abstract methods deposit() and withdraw(). Create subclasses: SavingsAccount and CurrentAccount that extend the BankAccount class and implement the respective methods to handle deposits and withdrawals for each account type.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🍖 <code>Write a Java program to create an abstract class Animal with abstract methods eat() and sleep(). Create subclasses Lion, Tiger, and Deer that extend the Animal class and implement the eat() and sleep() methods differently based on their specific behavior.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>👨‍💻 <code>Write a Java program to create an abstract class Employee with abstract methods calculateSalary() and displayInfo(). Create subclasses Manager and Programmer that extend the Employee class and implement the respective methods to calculate salary and display information for each role.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🔲 <code>Write a Java program to create an abstract class Shape3D with abstract methods calculateVolume() and calculateSurfaceArea(). Create subclasses Sphere and Cube that extend the Shape3D class and implement the respective methods to calculate the volume and surface area of each shape.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🛵 <code>Write a Java program to create an abstract class Vehicle with abstract methods startEngine() and stopEngine(). Create subclasses Car and Motorcycle that extend the Vehicle class and implement the respective methods to start and stop the engines for each vehicle type.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🏃‍♂️ <code>Write a Java program to create an abstract class Person with abstract methods eat() and exercise(). Create subclasses Athlete and LazyPerson that extend the Person class and implement the respective methods to describe how each person eats and exercises.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🎻 <code>Write a Java program to create an abstract class Instrument with abstract methods play() and tune(). Create subclasses for Glockenspiel and Violin that extend the Instrument class and implement the respective methods to play and tune each instrument.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🖼️ <code>Write a Java program to create an abstract class Shape2D with abstract methods draw() and resize(). Create subclasses Rectangle and Circle that extend the Shape2D class and implement the respective methods to draw and resize each shape.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🦅 <code>Write a Java program to create an abstract class Bird with abstract methods fly() and makeSound(). Create subclasses Eagle and Hawk that extend the Bird class and implement the respective methods to describe how each bird flies and makes a sound.</code></summary>
+</details>  
+
+<br><br>
+
+<details>
+<summary>🔺 <code>Write a Java program to create an abstract class GeometricShape with abstract methods area() and perimeter(). Create subclasses Triangle and Square that extend the GeometricShape class and implement the respective methods to calculate the area and perimeter of each shape.</code></summary>
+</details>  
 
 ---
 
 ## 🎯 Final Note  
-This collection is designed to give you **hands-on mastery of Java OOPs & Abstraction concepts**. Tackle them one by one and you’ll gain strong command over inheritance, method overriding, and abstract classes.  
+
+This collection is designed to give you **hands-on mastery of Java OOPs & Abstraction concepts**.  
+Use the collapsible sections to stay focused and work step by step.  
 
 🔥 Happy Coding! 🚀  
-
