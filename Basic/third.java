@@ -1,5 +1,4 @@
 
-
 class A {
 
     public static void main(String st[]) {
@@ -16,7 +15,7 @@ class A {
             int x = Integer.parseInt(a);
             int y = Integer.parseInt(b);
 
-            System.out.println("Sum of two numbers : " + (x + y));
+            System.out.println("product of two numbers : " + (x * y));
         } catch (java.io.IOException e) {
             System.out.println(e);
         }

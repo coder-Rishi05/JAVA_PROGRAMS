@@ -1,0 +1,5 @@
+//  Write a Java program to create a method that reads a file and throws an exception if the file is not found.
+
+class a {
+
+}
