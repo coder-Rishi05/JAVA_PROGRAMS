@@ -1,0 +1,43 @@
+### Packages Questions
+
+
+```
+1. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.
+```
+```
+2. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.
+```
+
+```
+3. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.
+```
+
+```
+4. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.
+```
+
+```
+5. Create a Java program to create a package with multiple default classes.
+
+```
+```
+6. Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.
+```
+
+```
+7. Write a Java program to perform employee payroll processing using packages. In the java file, Emp.java creates a package employee and creates a class Emp. Declare the variables name,empid, category, bpay, hra, da, npay, pf, gro```sspay, incometax, and allowance. Calculate the values in methods. Create another java file Emppay.java. Create an object e to call the methods to perform and print values.
+
+
+```
+8. Create a Java program to create a package with public class and protected members to be accessed in another class.
+
+```
+```
+9. Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.
+```
+
+```
+10. Create a Java program to create a package with public class and public members to be accessed in another class.
+
+```
+``````
