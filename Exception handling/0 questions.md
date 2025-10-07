@@ -21,7 +21,7 @@
 ```
 
 ```
-6. Write a Java program that reads a list of integers from the user and throws an exception if any numbers are duplicates
+6. Write a Java program that reads a list of integers from the user and throws an exception if any numbers are duplicates.
 ```
 
 ```
@@ -33,6 +33,7 @@
 ```
 
 ```
+
 9. Write a Java program to manage the driver with path, username and password, if not successful then throw an exception
 ```
 
@@ -52,6 +53,3 @@
 13. Write a Java program to show an example of nested try block.
 ```
 
-```
-
-```
