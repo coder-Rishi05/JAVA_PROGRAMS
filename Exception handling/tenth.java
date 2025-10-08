@@ -1,39 +1,88 @@
 // 10. Write a Java program to throw the SQL Query, insert, delete, update, if not successful then throw an exception
 
-class MyException extends Exception {
-    public MyException(String message) {
-        super(message);
+// inserting
+import java.sql.*;
+
+class Database {
+    Connection con;
+    Statement stm;
+
+    public Database(String url, String uname, String pwd) throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        con = DriverManager.getConnection(url, uname, pwd);
+        stm = con.createStatement();
     }
+
+    int insert_db(String query) throws SQLException {
+        // return rollno;
+    }
+
+    int delete_db(String query) throws SQLException {
+        // return rollno;
+    }
+
+    int update_db(String query) throws SQLException {
+        // return new_roll;
+    }
+
 }
 
-class Excep {
+class jdbc2 {
+// inserting
+import java.sql.*;
 
-    public static void checkOdd(int num) throws MyException // throws keyword.
-    {
-        if (num % 2 != 0) {
+class Database {
+    Connection con;
+    Statement stm;
 
-            throw new MyException("Number is odd! Please enter an even number.");
-        } else {
-            System.out.println(num + " is even.");
-        }
+    public Database(String url, String uname, String pwd) throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        con = DriverManager.getConnection(url, uname, pwd);
+        stm = con.createStatement();
     }
 
-    public static void main(String[] args) {
-        try {
+    int insert_db(String query) throws SQLException {
+        // return rollno;
+    }
 
-            if (args.length == 0) {
-                throw new ArrayIndexOutOfBoundsException();
-            }
+    int delete_db(String query) throws SQLException {
+        // return rollno;
+    }
 
-            int x = Integer.parseInt(args[0]);
-            checkOdd(x);
+    int update_db(String query) throws SQLException {
+        // return new_roll;
+    }
 
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("No input found: Please enter a number as an argument.");
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input: Please enter a valid integer.");
-        } catch (MyException e) {
-            System.out.println("Exception : " + e.getMessage());
-        }
+}
+
+class jdbc2 {
+
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+
+        void 
+
+    //     try {
+    //         Class.forName("com.mysql.cj.jdbc.Driver");
+
+    //         Connection con = DriverManager.getConnection(
+    //                 "jdbc:mysql://localhost:3306/java_db",
+    //                 "root",
+    //                 "root12");
+
+    //         Statement sc = con.createStatement();
+    //         int x = sc.executeUpdate("insert into java_work values(12)");
+
+    //         System.out.println("insert successfull : " + x);
+
+    //         con.close();
+
+    //     } catch (Exception e) {
+    //         System.out.println(e);
+    //     }
+    // }
+    Database db1 = new Database("jdbc:mysql://localhost:3306/java_db", "root", "root12");
+    int res = db1.insert("insert into student values()");
+
+
     }
 }

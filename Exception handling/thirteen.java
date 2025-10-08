@@ -6,9 +6,7 @@ class thirteen {
 
             int[] arr = new int[5];
             arr[2] = 10;
-
             try {
-
                 int result = arr[2] / 0;
                 System.out.println("Result: " + result);
             } catch (ArithmeticException e) {
@@ -23,6 +21,5 @@ class thirteen {
             System.out.println("Outer catch: General Exception caught : " + e.getMessage());
         }
 
-       
     }
 }
