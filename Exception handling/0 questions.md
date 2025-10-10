@@ -9,7 +9,7 @@
 ```
 
 ```
-3. Write a Java program to create a method that reads a file and throws an exception if the file is not found
+3. Write a Java program to create a method that reads a file and throws an exception if the file is not found. ✅
 ```
 
 ```
@@ -31,16 +31,12 @@
 ```
 8. Write a Java program to connect the Java API to Database, if connection not successful then throw an exception ✅
 ```
-
 ```
-
 9. Write a Java program to manage the driver with path, username and password, if not successful then throw an exception. ✅
 ```
-
 ```
 10. Write a Java program to throw the SQL Query, insert, delete, update, if not successful then throw an exception
 ```
-
 ```
 11. Write a Java program to show an example of throws Keyword. ✅
 ```
