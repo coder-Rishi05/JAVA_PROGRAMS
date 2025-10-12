@@ -1,88 +1,105 @@
 // 10. Write a Java program to throw the SQL Query, insert, delete, update, if not successful then throw an exception
 
-// inserting
 import java.sql.*;
 
+// Custom Exception for SQL Operations
+class SQLOperationException extends Exception {
+    public SQLOperationException(String message) {
+        super(message);
+    }
+}
+
+// Database class to manage connection and SQL operations
 class Database {
     Connection con;
     Statement stm;
 
+    // Constructor — establishes connection
     public Database(String url, String uname, String pwd) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
+        // Load the MySQL driver
+        Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection(url, uname, pwd);
         stm = con.createStatement();
+        System.out.println("Database connected successfully.");
     }
 
-    int insert_db(String query) throws SQLException {
-        // return rollno;
+    // Insert method
+    int insert_db(String query) throws SQLException, SQLOperationException {
+        int rows = stm.executeUpdate(query);
+        if (rows == 0) {
+            throw new SQLOperationException("Insert operation failed!");
+        }
+        return rows;
     }
 
-    int delete_db(String query) throws SQLException {
-        // return rollno;
+    // Delete method
+    int delete_db(String query) throws SQLException, SQLOperationException {
+        int rows = stm.executeUpdate(query);
+        if (rows == 0) {
+            throw new SQLOperationException("Delete operation failed!");
+        }
+        return rows;
     }
 
-    int update_db(String query) throws SQLException {
-        // return new_roll;
+    // Update method
+    int update_db(String query) throws SQLException, SQLOperationException {
+        int rows = stm.executeUpdate(query);
+        if (rows == 0) {
+            throw new SQLOperationException("Update operation failed!");
+        }
+        return rows;
     }
 
-}
-
-class jdbc2 {
-// inserting
-import java.sql.*;
-
-class Database {
-    Connection con;
-    Statement stm;
-
-    public Database(String url, String uname, String pwd) throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection(url, uname, pwd);
-        stm = con.createStatement();
-    }
-
-    int insert_db(String query) throws SQLException {
-        // return rollno;
-    }
-
-    int delete_db(String query) throws SQLException {
-        // return rollno;
-    }
-
-    int update_db(String query) throws SQLException {
-        // return new_roll;
-    }
-
-}
-
-class jdbc2 {
-
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
-
-        void 
-
-    //     try {
-    //         Class.forName("com.mysql.cj.jdbc.Driver");
-
-    //         Connection con = DriverManager.getConnection(
-    //                 "jdbc:mysql://localhost:3306/java_db",
-    //                 "root",
-    //                 "root12");
-
-    //         Statement sc = con.createStatement();
-    //         int x = sc.executeUpdate("insert into java_work values(12)");
-
-    //         System.out.println("insert successfull : " + x);
-
-    //         con.close();
-
-    //     } catch (Exception e) {
-    //         System.out.println(e);
-    //     }
-    // }
-    Database db1 = new Database("jdbc:mysql://localhost:3306/java_db", "root", "root12");
-    int res = db1.insert("insert into student values()");
-
-
+    // Close connection
+    void close() throws SQLException {
+        if (con != null) {
+            con.close();
+            System.out.println("Connection closed.");
+        }
     }
 }
+
+// Main class
+class mymain {
+    public static void main(String[] args) {
+        try {
+            Database db1 = new Database("jdbc:mysql://localhost:3306/java_db", "root", "root12");
+
+            int insertRes = db1.insert_db("INSERT INTO java_work (roll, name) VALUES (21, 'Rishabh')");
+            System.out.println("Insert Successful: " + insertRes + " row(s) affected.");
+
+            int updateRes = db1.update_db("UPDATE java_work SET name='Updated_Rishabh' WHERE roll=21");
+            System.out.println("Update Successful: " + updateRes + " row(s) affected.");
+
+            int deleteRes = db1.delete_db("DELETE FROM java_work WHERE roll=21");
+            System.out.println("Delete Successful: " + deleteRes + " row(s) affected.");
+
+            db1.close();
+
+        } catch (SQLOperationException e) {
+            System.out.println(e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.out.println("Driver not found: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Unexpected error: " + e.getMessage());
+        }
+    }
+}
+
+/**
+ * 
+ * Output :
+ * 
+ * PS D:\JAVA\databse connectivity in java> javac .\file.java
+ * PS D:\JAVA\databse connectivity in java> java -cp
+ * ".;lib/mysql-connector-j-9.4.0.jar" mymain
+ * Database connected successfully.
+ * Insert Successful: 1 row(s) affected.
+ * Update Successful: 1 row(s) affected.
+ * Delete Successful: 1 row(s) affected.
+ * Connection closed.
+ * 
+ * 
+ */
