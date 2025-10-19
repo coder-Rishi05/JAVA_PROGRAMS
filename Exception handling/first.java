@@ -16,7 +16,8 @@ class a {
 
 /*
  * Output
- * 
- * 
- * 
+ * javac first.java
+ * java a 10
+ * 10
+ 
  */
