@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applet 13 - Set Font</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f0f2f5;
+        padding: 10px;
+        margin: 0;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+        color: #222;
+      }
+
+      h2.question {
+        text-align: center;
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .code-box,
+      .output-box {
+        flex: 1 1 45%;
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        min-width: 250px;
+      }
+
+      .code-box pre {
+        overflow-x: auto;
+        background: #272822;
+        color: #f8f8f2;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      .output-box {
+        min-height: 250px;
+        background: #e0f7fa;
+        border: 2px dashed #00acc1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      .font-serif {
+        font-family: "Serif";
+        font-size: 20px;
+      }
+      .font-sans {
+        font-family: "SansSerif";
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .font-mono {
+        font-family: "Monospaced";
+        font-size: 22px;
+        font-style: italic;
+      }
+
+      .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+        padding: 10px 25px;
+        background: #00acc1;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .back-btn:hover {
+        background: #333;
+        color: #00acc1;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          flex-direction: column;
+        }
+        .code-box,
+        .output-box {
+          flex: 1 1 100%;
+        }
+        h1 {
+          font-size: 1.4rem;
+        }
+        h2.question {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .code-box pre {
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+        .output-box {
+          min-height: 200px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Applet 13: Set Font</h1>
+    <h2 class="question">Question: Create an applet in Java to set font.</h2>
+
+    <div class="container">
+      <!-- Code Section -->
+      <div class="code-box">
+        <h2>Program Code</h2>
+        <pre>
+import java.applet.*;
+import java.awt.*;
+
+public class SetFontApplet extends Applet {
+    Font f1, f2, f3;
+
+    public void init() {
+        f1 = new Font("Serif", Font.PLAIN, 20);
+        f2 = new Font("SansSerif", Font.BOLD, 24);
+        f3 = new Font("Monospaced", Font.ITALIC, 22);
+    }
+
+    public void paint(Graphics g) {
+        g.setFont(f1);
+        g.drawString("This is Serif - Plain", 50, 80);
+
+        g.setFont(f2);
+        g.drawString("This is SansSerif - Bold", 50, 130);
+
+        g.setFont(f3);
+        g.drawString("This is Monospaced - Italic", 50, 180);
+    }
+}
+      </pre
+        >
+      </div>
+
+      <!-- Output Section -->
+      <div class="output-box">
+        <div class="font-serif">This is Serif - Plain</div>
+        <div class="font-sans">This is SansSerif - Bold</div>
+        <div class="font-mono">This is Monospaced - Italic</div>
+      </div>
+    </div>
+
+    <a href="../applets.html" class="back-btn">← Back to Applets</a>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Applets</title>
+    <style>
+      /* ---------- Global Styles ---------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #fceabb, #f8b500);
+        color: #333;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #222;
+        margin-bottom: 40px;
+        text-align: center;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ---------- Grid Layout ---------- */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      /* ---------- Card Styles ---------- */
+      .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          background 0.3s ease;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        background-color: #fff8e1;
+      }
+
+      .card span {
+        font-weight: bold;
+        color: #ff6f00;
+        margin-right: 5px;
+      }
+
+      .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+        padding: 10px 25px;
+        background: #ff6f61;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .back-btn:hover {
+        background: #333;
+        color: #ff6f61;
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        color: #333;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .card {
+          font-size: 1rem;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Java Applets Question</h1>
+
+    <div class="grid">
+      <a href="applets/applet1.html" class="card"
+        ><span>1.</span> Create an applet showing the string "Hello World"
+        embedded in HTML page</a
+      >
+      <a href="applets/applet2.html" class="card"
+        ><span>2.</span> Create an applet showing the string "Hello World"
+        executed by appletviewer</a
+      >
+      <a href="applets/applet3.html" class="card"
+        ><span>3.</span> Create an applet in Java to draw a circle</a
+      >
+      <a href="applets/applet4.html" class="card"
+        ><span>4.</span> Create an applet in Java to draw a polygon</a
+      >
+      <a href="applets/applet5.html" class="card"
+        ><span>5.</span> Create an applet in Java to draw a rectangle</a
+      >
+      <a href="applets/applet6.html" class="card"
+        ><span>6.</span> Create an applet in Java to draw a square</a
+      >
+      <a href="applets/applet7.html" class="card"
+        ><span>7.</span> Create an applet in Java to draw 4 concentric
+        circles</a
+      >
+      <a href="applets/applet8.html" class="card"
+        ><span>8.</span> Create an applet in Java to draw a line</a
+      >
+      <a href="applets/applet9.html" class="card"
+        ><span>9.</span> Create an applet in Java to draw an oval</a
+      >
+      <a href="applets/applet10.html" class="card"
+        ><span>10.</span> Create an applet in Java to draw an arc</a
+      >
+      <a href="applets/applet11.html" class="card"
+        ><span>11.</span> Create an applet in Java to change the background
+        color</a
+      >
+      <a href="applets/applet12.html" class="card"
+        ><span>12.</span> Create an applet in Java to draw a rounded
+        rectangle</a
+      >
+      <a href="applets/applet13.html" class="card"
+        ><span>13.</span> Create an applet in Java to set font</a
+      >
+      <a href="applets/applet14.html" class="card"
+        ><span>14.</span> Create an applet to display a digital clock</a
+      >
+      <a href="applets/applet15.html" class="card"
+        ><span>15.</span> Java Program to Draw a Smiling Face using Graphics
+        Class Methods</a
+      >
+    </div>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+
+    <footer>© 2025 Java Learning Hub | Designed by Kuldeep Kumar</footer>
+  </body>
+</html>

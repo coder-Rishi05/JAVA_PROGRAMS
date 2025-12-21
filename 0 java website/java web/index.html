@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Core Programming | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0f0f17;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(90deg, #1e1e2f, #2f2fa2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: #6c63ff;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      background: radial-gradient(circle at top left, #2f2fa2, #1a1a2e);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 80px 10%;
+      background-color: #1a1a2e;
+    }
+
+    section:nth-child(even) {
+      background-color: #0f0f17;
+    }
+
+    section h2 {
+      color: #ffeb3b;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    section p {
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(90deg, #1e1e2f, #2f2fa2);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      section {
+        padding: 60px 8%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">JAVA HUB</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="program.html">Programs</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <h1>Welcome to Java Core Programming</h1>
+    <p>Master the fundamentals of Java — one of the most powerful and widely used programming languages in the world. Learn its history, features, and real-world applications that make it a cornerstone of software development.</p>
+  </div>
+
+  <!-- ===== INTRODUCTION SECTION ===== -->
+  <section id="intro">
+    <h2>Introduction to Java</h2>
+    <p>Java is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle Corporation). It is designed to be platform-independent, meaning Java programs can run on any system equipped with a Java Virtual Machine (JVM). The core principles of Java include simplicity, robustness, portability, and security.</p>
+    <p>Java follows the concept of “Write Once, Run Anywhere,” making it one of the most flexible languages in modern computing. It is widely used in desktop applications, web applications, mobile apps (Android), and enterprise systems.</p>
+  </section>
+
+  <!-- ===== HISTORY SECTION ===== -->
+  <section id="history">
+    <h2>History of Java</h2>
+    <p>Java was created in the early 1990s by James Gosling and his team at Sun Microsystems. Initially called “Oak,” the language was designed for interactive television. Later, it was renamed “Java,” inspired by Java coffee, symbolizing energy and creativity.</p>
+    <p>The first official version, Java 1.0, was released in 1995. Since then, Java has evolved through multiple versions, each introducing new features, better performance, and enhanced security. Today, Java remains one of the most popular languages in the world, supported by an enormous developer community and extensive libraries.</p>
+    <p>Major milestones include Java 2 (introducing Swing and Collections), Java 5 (Generics and Annotations), Java 8 (Lambdas and Streams), and the latest Java 21 (modern performance and pattern matching improvements).</p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Java Core Programming | Designed with ❤️ for learners
+  </footer>
+</body>
+</html>

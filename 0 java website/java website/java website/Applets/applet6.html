@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applet 6 - Draw Square</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f0f2f5;
+        padding: 10px;
+        color: #333;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #222;
+        font-size: 1.6rem;
+      }
+
+      h2.question {
+        text-align: center;
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .code-box,
+      .output-box {
+        flex: 1 1 45%;
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        min-width: 250px;
+      }
+
+      .code-box pre {
+        overflow-x: auto;
+        background: #272822;
+        color: #f8f8f2;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      .output-box {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        background: #ffe0e0;
+        border: 2px dashed #ff6f61;
+        font-weight: bold;
+      }
+
+      .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+        padding: 10px 25px;
+        background: #ff6f61;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .back-btn:hover {
+        background: #333;
+        color: #ff6f61;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          flex-direction: column;
+        }
+        .code-box,
+        .output-box {
+          flex: 1 1 100%;
+        }
+        .output-box {
+          height: 180px;
+          font-size: 1.2rem;
+        }
+        h1 {
+          font-size: 1.4rem;
+        }
+        h2.question {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .container {
+          gap: 10px;
+        }
+        .output-box {
+          min-height: 150px;
+          font-size: 1rem;
+        }
+        .code-box pre {
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Applet 6: Draw Square</h1>
+    <h2 class="question">
+      Question: Create an applet in Java to draw a square.
+    </h2>
+
+    <div class="container">
+      <!-- Code Section -->
+      <div class="code-box">
+        <h2>Program Code</h2>
+        <pre>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class q6 extends Applet {
+   public void init() {
+      System.out.println("init function");
+   }
+
+   public void start() {
+      System.out.println("start function");
+   }
+
+   public void paint(Graphics g) {
+      g.setColor(java.awt.Color.red);
+      g.drawRect(100, 200, 100, 100);
+      g.fillRect(100, 200, 100, 100);
+   }
+
+   public void stop() {
+      System.out.println("stop function");
+   }
+
+   public void destroy() {
+      System.out.println("destroy function");
+   }
+}
+      </pre
+        >
+      </div>
+
+      <!-- Output Section -->
+      <div class="output-box">
+        <!-- Simulated square -->
+        <svg width="150" height="150">
+          <rect
+            x="25"
+            y="25"
+            width="100"
+            height="100"
+            style="fill: red; stroke: black; stroke-width: 2"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <a href="../applets.html" class="back-btn">← Back to Applets</a>
+  </body>
+</html>

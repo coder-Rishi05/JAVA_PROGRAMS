@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Portal</title>
+
+    <style>
+      /* ---------- Global Reset ---------- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #ffd89b, #19547b);
+        color: #222;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      /* ---------- Grid Layout ---------- */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      /* ---------- Card Links ---------- */
+      .card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: 600;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        background: #fff8e1;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .card::after {
+        content: "→";
+        margin-left: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease, margin-left 0.3s ease;
+      }
+
+      .card:hover::after {
+        opacity: 1;
+        margin-left: 15px;
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        margin-top: 50px;
+        color: #fff;
+        text-align: center;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .card {
+          font-size: 1rem;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>☕ Java Portal</h1>
+
+    <div class="grid">
+      <a href="applets.html" class="card">Applets</a>
+      <a href="basic.html" class="card">Basic Programming Constructs</a>
+      <a href="conversion.html" class="card">Data Conversion</a>
+      <a href="delegation.html" class="card">Delegation Event Model</a>
+      <a href="exception.html" class="card">Exception Handling</a>
+      <a href="function.html" class="card">Functions</a>
+      <a href="awt.html" class="card">Graphical User Interface (AWT)</a>
+      <a href="swings.html" class="card">Graphical User Interface (Swings)</a>
+      <a href="inheritance.html" class="card">Inheritance</a>
+      <a href="io.html" class="card">Input / Output</a>
+      <a href="interfaces.html" class="card">Interfaces</a>
+      <a href="jdbc.html" class="card">Java Database Connectivity</a>
+      <a href="multiarray.html" class="card">Multi-Dimension Arrays</a>
+      <a href="multithreading.html" class="card">Multithreading</a>
+      <a href="oop.html" class="card">Object Oriented Programming</a>
+      <a href="packages.html" class="card">Packages</a>
+      <a href="singlearray.html" class="card">Single Dimension Arrays</a>
+      <a href="strings.html" class="card">Strings</a>
+    </div>
+
+    <footer>© 2025 Java Learning Hub | Designed by Kuldeep Kumar</footer>
+  </body>
+</html>

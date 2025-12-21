@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applet 11 - Change Background Color</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f0f2f5;
+        padding: 10px;
+        color: #333;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #222;
+        font-size: 1.6rem;
+      }
+
+      h2.question {
+        text-align: center;
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .code-box,
+      .output-box {
+        flex: 1 1 45%;
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        min-width: 250px;
+      }
+
+      .code-box pre {
+        overflow-x: auto;
+        background: #272822;
+        color: #f8f8f2;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      .output-box {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 250px;
+        background: #fff3e0;
+        border: 2px dashed #ff6f00;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: bold;
+      }
+
+      .color-btn {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+        color: #fff;
+      }
+
+      .color-btn.red {
+        background: #e53935;
+      }
+      .color-btn.green {
+        background: #43a047;
+      }
+      .color-btn.blue {
+        background: #1e88e5;
+      }
+      .color-btn.yellow {
+        background: #fdd835;
+        color: #000;
+      }
+
+      .color-btn:hover {
+        opacity: 0.8;
+      }
+
+      .back-btn {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+        padding: 10px 25px;
+        background: #ff6f61;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .back-btn:hover {
+        background: #333;
+        color: #ff6f61;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          flex-direction: column;
+        }
+        .code-box,
+        .output-box {
+          flex: 1 1 100%;
+        }
+        h1 {
+          font-size: 1.4rem;
+        }
+        h2.question {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .code-box pre {
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+        .output-box {
+          min-height: 200px;
+          font-size: 0.9rem;
+        }
+        .color-btn {
+          padding: 8px 16px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Applet 11: Change Background Color</h1>
+    <h2 class="question">
+      Question: Create an applet in Java to change the background color.
+    </h2>
+
+    <div class="container">
+      <!-- Code Section -->
+      <div class="code-box">
+        <h2>Program Code</h2>
+        <pre>
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ColorChangeApplet extends Applet implements ActionListener {
+    Button redButton, greenButton, blueButton, yellowButton;
+
+    public void init() {
+        redButton = new Button("Red");
+        greenButton = new Button("Green");
+        blueButton = new Button("Blue");
+        yellowButton = new Button("Yellow");
+        add(redButton);
+        add(greenButton);
+        add(blueButton);
+        add(yellowButton);
+        redButton.addActionListener(this);
+        greenButton.addActionListener(this);
+        blueButton.addActionListener(this);
+        yellowButton.addActionListener(this);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == redButton)
+            setBackground(Color.red);
+        else if (e.getSource() == greenButton)
+            setBackground(Color.green);
+        else if (e.getSource() == blueButton)
+            setBackground(Color.blue);
+        else if (e.getSource() == yellowButton)
+            setBackground(Color.yellow);
+
+        repaint();
+    }
+}
+      </pre
+        >
+      </div>
+
+      <!-- Output Section -->
+      <div class="output-box" id="output">
+        <button class="color-btn red" onclick="changeColor('red')">Red</button>
+        <button class="color-btn green" onclick="changeColor('green')">
+          Green
+        </button>
+        <button class="color-btn blue" onclick="changeColor('blue')">
+          Blue
+        </button>
+        <button class="color-btn yellow" onclick="changeColor('yellow')">
+          Yellow
+        </button>
+      </div>
+    </div>
+
+    <a href="../applets.html" class="back-btn">← Back to Applets</a>
+
+    <script>
+      function changeColor(color) {
+        document.getElementById("output").style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

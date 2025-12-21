@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Programs Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0f0f17;
+      overflow: hidden;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(90deg, #1e1e2f, #2f2fa2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: #6c63ff;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .container {
+      display: grid;
+      grid-template-columns: 1.2fr 1.8fr 2fr;
+      gap: 15px;
+      padding: 20px;
+      margin-top: 80px;
+      height: calc(100vh - 100px);
+      overflow: hidden;
+    }
+
+    .list-box {
+      background-color: #1a1a2e;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      overflow-y: auto;
+      height: 100%;
+      scrollbar-width: thin;
+      scrollbar-color: #6c63ff #222;
+    }
+
+    .list-box::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .list-box::-webkit-scrollbar-thumb {
+      background-color: #6c63ff;
+      border-radius: 4px;
+    }
+
+    .list-box::-webkit-scrollbar-track {
+      background: #222;
+    }
+
+    /* ===== TOPICS FRAME ===== */
+    #topics {
+      background: linear-gradient(180deg, #2f2fa2 0%, #1a1a2e 100%);
+      color: #fff;
+    }
+
+    #topics h3 {
+      color: #ffeb3b;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    #topics a {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid #6c63ff;
+      width: 300px;
+      text-align: center;
+    }
+
+    #topics a:hover {
+      background-color: #6c63ff;
+      color: #fff;
+      box-shadow: 0 0 10px #6c63ff;
+    }
+
+    /* ===== HEADINGS & LINKS ===== */
+    .list-box h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #ffeb3b;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 16px;
+      padding: 10px 15px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      display: inline-block;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #6c63ff;
+      color: #fff;
+      transform: scale(1.03);
+      box-shadow: 0 0 10px #6c63ff;
+    }
+
+    /* ===== IFRAME ===== */
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background-color: #0d0d1a;
+      color: #fff;
+      background-color: #d0dae5; /* dark grey */
+  color: #ffffff; /* white text */
+ 
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+      .container {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: auto;
+      }
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">JAVA HUB</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="main.html" class="active">Programs</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- Main Frame -->
+  <div class="container">
+    <!-- Left Column: Topics -->
+    <div class="list-box" id="topics">
+      <h3>Topics</h3>
+      <ul>
+  <li><a href="#" onclick="showPrograms('applets')">1. Applets</a></li>
+  <li><a href="#" onclick="showPrograms('basic-programming-constructs')">2. Basic Programming Constructs</a></li>
+  <li><a href="#" onclick="showPrograms('data-conversion')">3. Data Conversion</a></li>
+  <li><a href="#" onclick="showPrograms('delegation-event-model')">4. Delegation Event Model</a></li>
+  <li><a href="#" onclick="showPrograms('exception-handling')">5. Exception Handling</a></li>
+  <li><a href="#" onclick="showPrograms('functions')">6. Functions</a></li>
+  <li><a href="#" onclick="showPrograms('gui-awt')">7. Graphical User Interface (AWT)</a></li>
+  <li><a href="#" onclick="showPrograms('gui-swings')">8. Graphical User Interface (Swings)</a></li>
+  <li><a href="#" onclick="showPrograms('inheritance')">9. Inheritance</a></li>
+  <li><a href="#" onclick="showPrograms('input-output')">10. Input/Output</a></li>
+  <li><a href="#" onclick="showPrograms('interfaces')">11. Interfaces</a></li>
+  <li><a href="#" onclick="showPrograms('jdbc')">12. Java Database Connectivity</a></li>
+  <li><a href="#" onclick="showPrograms('multi-dimension-arrays')">13. Multi-Dimension Arrays</a></li>
+  <li><a href="#" onclick="showPrograms('multithreading')">14. Multithreading</a></li>
+  <li><a href="#" onclick="showPrograms('oops')">15. Object Oriented Programming</a></li>
+  <li><a href="#" onclick="showPrograms('packages')">16. Packages</a></li>
+  <li><a href="#" onclick="showPrograms('single-dimension-arrays')">17. Single Dimension Arrays</a></li>
+  <li><a href="#" onclick="showPrograms('strings')">18. Strings</a></li>
+</ul>
+    </div>
+
+    <!-- Middle Column: Program List -->
+    <div class="list-box" id="programList">
+      <h3>Program List</h3>
+      <p>Select a topic to view programs.</p>
+    </div>
+
+    <!-- Right Column: Code Viewer -->
+    <div class="list-box">
+      <h3>Program Code</h3>
+      <iframe id="codeFrame" src=""></iframe>
+    </div>
+  </div>
+
+  <script>
+    const programs = {
+     oops: [
+  { name: 'Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.', file: "code/oops/p1.java" },
+  { name: 'Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.', file: "code/oops/p2.java" },
+  { name: 'Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.', file: "code/oops/p3.java" },
+  { name: 'Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.', file: "code/oops/p4.java" },
+  { name: 'Write a Java program to create a class called "Book" with attributes for title, author, and ISBN, and methods to add and remove books from a collection.', file: "code/oops/p5.java" },
+  { name: 'Write a Java program to create a class called "Employee" with a name, job title, and salary attributes, and methods to calculate and update salary.', file: "code/oops/p6.java" },
+  { name: 'Write a Java program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.', file: "code/oops/p7.java" },
+  { name: 'Write a Java program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.', file: "code/oops/p8.java" },
+  { name: 'Write a Java program to create a class called "Employee" with a name, salary, and hire date attributes, and a method to calculate years of service.', file: "code/oops/p9.java" },
+  { name: 'Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.', file: "code/oops/p10.java" },
+  { name: 'Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.', file: "code/oops/p11.java" },
+  { name: 'Write a Java program to create a class called "Airplane" with a flight number, destination, and departure time attributes, and methods to check flight status and delay.', file: "code/oops/p12.java" },
+  { name: 'Write a Java program to create a class called "Inventory" with a collection of products and methods to add and remove products, and to check for low inventory.', file: "code/oops/p13.java" },
+  { name: 'Write a Java program to create a class called "School" with attributes for students, teachers, and classes, and methods to add and remove students and teachers, and to create classes.', file: "code/oops/p14.java" },
+  { name: 'Write a Java program to create a class called "MusicLibrary" with a collection of songs and methods to add and remove songs, and to play a random song.', file: "code/oops/p15.java" },
+  { name: 'Write a Java program to create a class called "Shape" with abstract methods for calculating area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".', file: "code/oops/p16.java" },
+  { name: 'Write a Java program to create a class called "Movie" with attributes for title, director, actors, and reviews, and methods for adding and retrieving reviews.', file: "code/oops/p17.java" },
+  { name: 'Write a Java program to create a class called "Restaurant" with attributes for menu items, prices, and ratings, and methods to add and remove items, and to calculate average rating.', file: "code/oops/p18.java" },
+  { name: 'Write a Java program to create a class with methods to search for flights and hotels, and to book and cancel reservations.', file: "code/oops/p19.java" },
+  { name: 'Create a class showing an example of default constructor.', file: "code/oops/p20.java" },
+  { name: 'Create a class showing an example of parameterized constructor.', file: "code/oops/p21.java" },
+  { name: 'Create a class showing an example of copy constructor.', file: "code/oops/p22.java" },
+  { name: 'Create a class entering the rollno, name and class of the student from user but rollno should be automatically generated as we enter the information of 10 students.', file: "code/oops/p23.java" },
+  { name: 'Create a class showing the area of circle and rectangle by method overloading.', file: "code/oops/p24.java" },
+  { name: 'Create a class, entering the command line arguments from the user and show all the arguments as output.', file: "code/oops/p25.java" },
+  { name: 'Write a Java program to create a class called Person with private instance variables name, age, and country. Provide public getter and setter methods to access and modify these variables.', file: "code/oops/p26.java" },
+  { name: 'Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.', file: "code/oops/p27.java" },
+  { name: 'Write a Java program to create a class called Rectangle with private instance variables length and width. Provide public getter and setter methods to access and modify these variables.', file: "code/oops/p28.java" },
+  { name: 'Write a Java program to create a class called Employee with private instance variables employee_id, employee_name, and employee_salary. Provide public getter and setter methods to access and modify the id and name variables, but provide a getter method for the salary variable that returns a formatted string.', file: "code/oops/p29.java" },
+  { name: 'Write a Java program to create a class called Circle with a private instance variable radius. Provide public getter and setter methods to access and modify the radius variable. However, provide two methods called calculateArea() and calculatePerimeter() that return the calculated area and perimeter based on the current radius value.', file: "code/oops/p30.java" },
+  { name: 'Write a Java program to create a class called Car with private instance variables company_name, model_name, year, and mileage. Provide public getter and setter methods to access and modify the company_name, model_name, and year variables. However, only provide a getter method for the mileage variable.', file: "code/oops/p31.java" },
+  { name: 'Write a Java program to create a class called Student with private instance variables student_id, student_name, and grades. Provide public getter and setter methods to access and modify the student_id and student_name variables. However, provide a method called addGrade() that allows adding a grade to the grades variable while performing additional validation.', file: "code/oops/p32.java" }
+]
+    };
+
+
+
+    function showPrograms(topic) {
+      const listDiv = document.getElementById("programList");
+      const topicPrograms = programs[topic];
+      if (!topicPrograms) {
+        listDiv.innerHTML = "<p>No programs available for this topic.</p>";
+        return;
+      }
+      let html = `<h3>${topic.toUpperCase()} Programs</h3><ul>`;
+      topicPrograms.forEach((p) => {
+        html += `<li><a href="#" onclick="loadProgram('${p.file}')">${p.name}</a></li>`;
+      });
+      html += "</ul>";
+      listDiv.innerHTML = html;
+    }
+
+    function loadProgram(filePath) {
+      document.getElementById("codeFrame").src = filePath;
+    }
+  </script>
+</body>
+</html>
+
